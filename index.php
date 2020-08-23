@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php'; 
 
-$client = new GuzzleHttp\Client();
+$client = new GuzzleHttp\Client(['verify' => false]);
 $res = $client->request('GET', 'https://restcountries.eu/rest/v2/all', [
     'headers' => [
         'User-Agent' => 'testing/1.0',
